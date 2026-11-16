@@ -289,6 +289,11 @@ button.ln:active{color:var(--uva-s)}
 }
 /* 16 Nov: splashes stay behind every control and never reach the chip row or the text (owner's iPhone report) */
 .feat .head,.chips,.info,.row,.arrows,.info .btn{position:relative;z-index:2}
+/* 16 Nov (Martin's iPhone: "there are some cut offs"): no sideways scrollers on phones. The dish chips and the booking
+   rows wrap instead, so no chip is ever cut by the screen edge; the longest dish name may break onto two lines. */
+.chips,.cr{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none}
+.dchip{white-space:normal;max-width:100%;text-align:left;line-height:1.3;padding-top:8px;padding-bottom:8px}
+.cr{row-gap:8px}
 
 </style>
 <div class="site" id="top">
