@@ -110,8 +110,8 @@ body{margin:0}
 .lbl[hidden]{display:none}
 .cnt{position:absolute;z-index:4;bottom:20px;right:20px;padding:6px 8px;background:rgba(13,12,11,.72);font:500 12px/1 var(--sans);letter-spacing:.18em;color:var(--avorio)}
 .bloomer{position:absolute;right:-70px;bottom:-80px;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,var(--loud),rgba(13,12,11,0));opacity:.5;pointer-events:none}
-.splash{position:absolute;z-index:0;color:var(--loud);pointer-events:none;width:68%;aspect-ratio:1;right:-15%;top:-11%;opacity:1}
-.splash.b{width:44%;right:auto;top:auto;left:-11%;bottom:-8%}
+.splash{position:absolute;z-index:0;color:var(--loud);pointer-events:none;width:58%;aspect-ratio:1;right:-12%;top:-4%;opacity:1}
+.splash.b{width:38%;right:auto;top:auto;left:-9%;bottom:-3%}
 .feat.go .splash{animation:throwin .8s cubic-bezier(.2,1.4,.4,1) both}
 .feat.go .splash.b{animation-delay:.14s}
 .feat.go .bloomer{animation:bloom 1.6s var(--ease) both}
@@ -287,6 +287,8 @@ button.ln:active{color:var(--uva-s)}
   .hero .tx{padding-top:90px;padding-bottom:44px;gap:12px}
   .sign{font-size:72px}
 }
+/* 16 Nov: splashes stay behind every control and never reach the chip row or the text (owner's iPhone report) */
+.feat .head,.chips,.info,.row,.arrows,.info .btn{position:relative;z-index:2}
 
 </style>
 <div class="site" id="top">
