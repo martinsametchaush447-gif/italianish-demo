@@ -562,7 +562,7 @@ window.ITALIANISH={"hours":[{"day":"Monday","open":13,"close":23},{"day":"Tuesda
       if (i === cur && how !== 'replay') return;
       cur = i;
       var d = D.dishes[i];
-      feat.style.setProperty('--loud', 'var(--l-' + d.loud + ')');
+      feat.style.setProperty('--loud', 'var(--l-saffron)'); /* one accent site-wide (18 Nov, Martin chose B) */
       var next = L[1 - top], src = pool[d.img];
       next.src = src.src; next.alt = src.alt;
       next.classList.remove('play'); void next.offsetWidth;
@@ -644,7 +644,7 @@ window.ITALIANISH={"hours":[{"day":"Monday","open":13,"close":23},{"day":"Tuesda
       g[1].forEach(function (k) {
         if (k.indexOf('d:') === 0) {
           var i = byId[k.slice(2)], d = D.dishes[i];
-          h += '<button type="button" class="ln" data-i="' + i + '" style="--c:var(--l-' + d.loud + ')"><span class="see" aria-hidden="true"></span><span class="nmx">' + esc(d.name) + (d.tag === 'V' ? ' V' : '') + '</span><span class="dots" aria-hidden="true"></span><span class="pr">£' + d.price + '</span><span class="sr">, see this dish</span></button><p class="sub">' + esc(d.desc) + '</p>';
+          h += '<button type="button" class="ln" data-i="' + i + '" style="--c:var(--l-saffron)"><span class="see" aria-hidden="true"></span><span class="nmx">' + esc(d.name) + (d.tag === 'V' ? ' V' : '') + '</span><span class="dots" aria-hidden="true"></span><span class="pr">£' + d.price + '</span><span class="sr">, see this dish</span></button><p class="sub">' + esc(d.desc) + '</p>';
         } else {
           var it = D.more[k];
           h += '<div class="ln"><span class="nmx">' + esc(k) + '</span><span class="dots" aria-hidden="true"></span><span class="pr">£' + it[1] + '</span></div><p class="sub">' + esc(it[0]) + '</p>';
